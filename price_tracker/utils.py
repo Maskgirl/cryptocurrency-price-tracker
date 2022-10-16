@@ -8,5 +8,5 @@ def check_prices_runner():
 
 def check_price_scheduler():
     scheduler = BackgroundScheduler()
-    scheduler.add_job(check_prices_runner, 'interval', seconds=5)
+    scheduler.add_job(check_prices_runner, 'interval', seconds=30)
     scheduler.start()
