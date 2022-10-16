@@ -1,5 +1,5 @@
 """
-ASGI config for cryptocurrency-price-tracker project.
+ASGI config for cryptocurrency_price_tracker project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cryptocurrency-price-tracker.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "cryptocurrency_price_tracker.settings")
 
 application = get_asgi_application()
