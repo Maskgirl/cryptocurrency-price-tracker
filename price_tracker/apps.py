@@ -7,6 +7,5 @@ class PriceTrackerConfig(AppConfig):
     name = 'price_tracker'
 
     def ready(self):
-        print("ready")
         from .utils import scheduler
         scheduler.start()

@@ -19,7 +19,7 @@ def send_alert_mail(subject, email_message):
         subject,
         email_message,
         FROM_EMAIL,
-        [EMAIL],
+        [TO_EMAIL],
         fail_silently=False,
     )
 
