@@ -58,10 +58,9 @@ def check_prices_runner():
                 message = f"Alert!, {coin_name} price is {price} USD which is below {min_limit}"
                 send_alert_mail(subject, message)
         utc_timestamp = coins_detail[coin_name]['last_updated_at']
-        utc_iso_string = datetime.utcfromtimestamp(utc_timestamp).isoformat() + "Z"
         coin_price = CoinPrice(
             coin=coin_name,
-            timestamp=utc_iso_string,
+            timestamp=datetime.utcfromtimestamp(utc_timestamp),
             price=price)
         coin_price.save()
         coin_to_price_state_map[coin_name] = curr_price_state

@@ -3,4 +3,4 @@ from price_tracker.viewsets import *
 
 router = routers.DefaultRouter()
 
-router.register('prices/bitcoin', CoinPriceViewset)
+router.register(r'prices/(?P<coin_name>\w+)', CoinPriceViewset)
