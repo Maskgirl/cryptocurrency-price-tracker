@@ -16,5 +16,5 @@ class CoinPriceViewset(viewsets.ModelViewSet):
         queryset = self.queryset.filter(coin=coin_name)
         if 'date' in self.request.query_params:
             date_query_param = self.request.query_params['date']
-            queryset = self.queryset.filter(timestamp__date=datetime.strptime(date_query_param, "%Y/%m/%d"))
+            queryset = queryset.filter(timestamp__date=datetime.strptime(date_query_param, "%Y/%m/%d"))
         return queryset

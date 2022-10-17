@@ -20,5 +20,6 @@ Cryptocurrency price tracker in Django
 
 ## APIs
 
-1. `/api/prices/bitcoin/`
+1. `/api/prices/<coin_name>/?date=2022/10/17`
+   1. example - `http://127.0.0.1:8000/api/prices/litecoin/?date=2022/10/17`
    
