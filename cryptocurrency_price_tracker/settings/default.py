@@ -55,7 +55,7 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "cryptocurrency_price_tracker.urls"
 REST_FRAMEWORK = {
-    'PAGE_SIZE': 5,
+    'PAGE_SIZE': 100,
     'DEFAULT_RENDERER_CLASSES': (
         'rest_framework.renderers.JSONRenderer',
     ),
