@@ -1,4 +1,5 @@
 from django.apps import AppConfig
+from django.core.mail import send_mail
 
 
 class PriceTrackerConfig(AppConfig):
@@ -6,5 +7,6 @@ class PriceTrackerConfig(AppConfig):
     name = 'price_tracker'
 
     def ready(self):
-        from .utils import check_price_scheduler
-        check_price_scheduler()
+        print("ready")
+        from .utils import scheduler
+        scheduler.start()
